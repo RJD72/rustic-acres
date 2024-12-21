@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('./assets/Rustic Acres Hero.svg')",
+        hero: "url('./assets/images/Rustic Acres Hero.svg')",
       },
       colors: {
         base: "#F7F5F0",

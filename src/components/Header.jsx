@@ -1,8 +1,11 @@
 import { Button, Navbar } from "flowbite-react";
+import { Link, useLocation } from "react-router-dom";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/images/logo.png";
 
 const Header = () => {
+  const location = useLocation();
+  const path = location.pathname;
   return (
     <Navbar fluid rounded className="px-0 bg-base text-primaryNeutral">
       <Navbar.Brand>
@@ -20,13 +23,21 @@ const Header = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="#" active>
-          Home
+        <Navbar.Link active={path === "/"} as={"div"}>
+          <Link to={"/"}>Home</Link>
         </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        <Navbar.Link active={path === "/puppies"}>
+          <Link to={"/puppies"}>Puppies</Link>
+        </Navbar.Link>
+        <Navbar.Link active={path === "/about"}>
+          <Link to={"/about"}>About Us</Link>
+        </Navbar.Link>
+        <Navbar.Link active={path === "/faq"}>
+          <Link to={"/faq"}>FAQ</Link>
+        </Navbar.Link>
+        <Navbar.Link active={path === "/contact"} as={"div"}>
+          <Link to={"/contact"}>Contact</Link>
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );

@@ -1,5 +1,5 @@
 import { Button } from "flowbite-react";
-import GroupPhoto from "../assets/group-photo.jpg";
+import GroupPhoto from "../assets/images/group-photo.jpg";
 
 const Hero = () => {
   return (

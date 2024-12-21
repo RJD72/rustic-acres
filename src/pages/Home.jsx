@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import PuppyImage2 from "../assets/image2.jpg";
+import PuppyImage2 from "../assets/images/image2.jpg";
 
 const Home = () => {
   return (
@@ -39,7 +39,7 @@ const Home = () => {
           <img
             src={PuppyImage2}
             alt="Puppy in grass"
-            className=" object-cover"
+            className=" object-cover pb-10"
           />
         </div>
       </div>
