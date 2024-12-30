@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div className="min-h-screen bg-base">
-      <div className="shadow-xl max-w-6xl mx-auto sm:rounded-lg">
+      <div className=" max-w-6xl mx-auto sm:rounded-lg">
         <div className="pt-10">
           <h2 className="text-3xl md:text-5xl font-bold text-center">
             Contact
@@ -83,12 +83,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="flex justify-between w-full px-3">
-                <div className="md:flex md:items-center">
-                  <label className="block text-gray-500 font-bold">
-                    <input className="mr-2 leading-tight" type="checkbox" />
-                    <span className="text-sm">Send me your newsletter!</span>
-                  </label>
-                </div>
+                <div className="md:flex md:items-center"></div>
                 <button
                   className="shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
                   type="submit"

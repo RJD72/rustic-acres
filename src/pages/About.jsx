@@ -1,54 +1,43 @@
+import { Link } from "react-router-dom";
+import PuppyImage1 from "../assets/images/image1.jpg";
+
 const About = () => {
   return (
-    <div className="min-h-screen bg-base">
-      <div
-        id="about"
-        className="relative bg-white overflow-hidden pt-16 max-w-6xl mx-auto"
-      >
-        <div className="">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <svg
-              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-              fill="currentColor"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <polygon points="50,0 100,0 50,100 0,100"></polygon>
-            </svg>
-
-            <div className="pt-1"></div>
-
-            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="sm:text-center lg:text-left">
-                <h2 className="my-6 text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
-                  About me
-                </h2>
-
-                <p>
-                  Donec porttitor, enim ut dapibus lobortis, lectus sem
-                  tincidunt dui, eget ornare lectus ex non libero. Nam rhoncus
-                  diam ultrices porttitor laoreet. Ut mollis fermentum ex, vel
-                  viverra lorem volutpat sodales. In ornare porttitor odio sit
-                  amet laoreet. Sed laoreet, nulla a posuere ultrices, purus
-                  nulla tristique turpis, hendrerit rutrum augue quam ut est.
-                  Fusce malesuada posuere libero, vitae dapibus eros facilisis
-                  euismod. Sed sed lobortis justo, ut tincidunt velit. Mauris in
-                  maximus eros.
-                </p>
-              </div>
-            </main>
+    <section className="bg-gray-100 min-h-screen">
+      <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center ">
+          <div className="max-w-lg">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              About Us
+            </h2>
+            <p className="mt-4 text-gray-600 text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
+              eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
+              magna quis elit efficitur consequat. Mauris eleifend velit a
+              pretium iaculis. Donec sagittis velit et magna euismod, vel
+              aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
+              arcu volutpat vel.
+            </p>
+            <div className="mt-8">
+              <Link
+                to={"/contact"}
+                className="text-blue-500 hover:text-blue-600 font-medium hover:underline"
+              >
+                Learn more about us
+                <span className="ml-2">&#8594;</span>
+              </Link>
+            </div>
+          </div>
+          <div className="mt-12 md:mt-0">
+            <img
+              src={PuppyImage1}
+              alt="About Us Image"
+              className="object-cover rounded-lg shadow-md"
+            />
           </div>
         </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img
-            className="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src="https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg"
-            alt=""
-          />
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default About;

@@ -1,7 +1,7 @@
 const FAQ = () => {
   return (
     <div className="min-h-screen bg-base">
-      <div className="relative w-full bg-base px-6 pt-10 pb-8  shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+      <div className="relative w-full bg-base pt-10 pb-8   sm:mx-auto sm:max-w-6xl  sm:px-5">
         <div className="mx-auto px-5">
           <div className="flex flex-col items-center">
             <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
