@@ -1,7 +1,8 @@
 import { Button, Navbar } from "flowbite-react";
 import { Link, useLocation } from "react-router-dom";
-import { customButtonTheme } from "./customThemes/buttonTheme";
-import { customNavbarTheme } from "./customThemes/navBarTheme";
+import { customButtonTheme } from "../customThemes/buttonTheme";
+import { customNavbarTheme } from "../customThemes/navBarTheme";
+import { IoIosContact } from "react-icons/io";
 
 import logo from "../assets/images/logo.png";
 
@@ -29,8 +30,9 @@ const Header = () => {
         <Button
           theme={customButtonTheme}
           color="button"
-          className="hidden lg:block"
+          className="hidden lg:block "
         >
+          <IoIosContact size={20} className="mr-2" />
           Contact Us
         </Button>
         <Navbar.Toggle />

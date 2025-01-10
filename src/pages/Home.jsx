@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import Image2 from "../assets/images/image2.jpg";
 import Image6 from "../assets/images/image6.jpg";
 
-import BenefitsSection from "../components/BenifitsSection";
+import BenefitsSection from "../components/BenefitsSection";
 
 const Home = () => {
   return (
@@ -40,7 +40,7 @@ const Home = () => {
         </p>
       </div>
       <BenefitsSection />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto my-10 px-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto pt-10 pb-32 px-3">
         <div className="rounded-lg">
           <img src={Image2} alt="" className="h-full rounded-lg" />
         </div>

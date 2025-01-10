@@ -1,6 +1,8 @@
 import { Button } from "flowbite-react";
 import GroupPhoto from "../assets/images/group-photo.jpg";
-import { customButtonTheme } from "./customThemes/buttonTheme";
+import { customButtonTheme } from "../customThemes/buttonTheme";
+import { IoIosContact } from "react-icons/io";
+import { LuDog } from "react-icons/lu";
 
 const Hero = () => {
   return (
@@ -24,11 +26,17 @@ const Hero = () => {
                 theme={customButtonTheme}
                 outline
                 color="button"
-                className=""
+                className="flex items-center justify-center"
               >
+                <LuDog size={20} className="mr-2" />
                 Puppy Gallery
               </Button>
-              <Button theme={customButtonTheme} color="button" className="">
+              <Button
+                theme={customButtonTheme}
+                color="button"
+                className="flex items-center justify-center"
+              >
+                <IoIosContact size={20} className="mr-2" />
                 Contact Us
               </Button>
             </div>

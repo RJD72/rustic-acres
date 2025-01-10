@@ -1,15 +1,16 @@
 import { Footer } from "flowbite-react";
+import { customFooterTheme } from "../customThemes/footerTheme";
 import logo from "../assets/images/logo.png";
 
 const FooterComponent = () => {
   return (
-    <Footer container className="bg-primaryNeutral">
+    <Footer theme={customFooterTheme} container className="bg-primaryNeutral">
       <div className="w-full text-center text-white">
-        <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
+        <div className="w-full  justify-center flex sm:items-center sm:justify-between">
           <Footer.Brand
-            className="text-white h-12"
+            className="h-12 hidden sm:block"
             src={logo}
-            alt="Flowbite Logo"
+            alt="Timeless Rustic Acres logo"
             name="Timeless Rustic Acres"
           />
           <Footer.LinkGroup className="text-white">

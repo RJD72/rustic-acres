@@ -29,7 +29,7 @@ const Puppies = () => {
       <h2 className="text-3xl md:text-5xl font-bold py-10 text-center">
         Puppies
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4 pb-32 max-w-6xl mx-auto">
         {imageArr.length > 0 ? (
           imageArr.map((img, index) => (
             <div
