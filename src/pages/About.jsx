@@ -3,8 +3,8 @@ import PuppyImage1 from "../assets/images/image1.jpg";
 
 const About = () => {
   return (
-    <section className="bg-gray-100 min-h-screen">
-      <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-base min-h-screen">
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center ">
           <div className="max-w-lg">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">

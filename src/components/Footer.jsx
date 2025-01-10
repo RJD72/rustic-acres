@@ -1,27 +1,30 @@
-"use client";
-
 import { Footer } from "flowbite-react";
+import logo from "../assets/images/logo.png";
 
 const FooterComponent = () => {
   return (
-    <Footer container className="bg-base">
-      <div className="w-full text-center">
+    <Footer container className="bg-primaryNeutral">
+      <div className="w-full text-center text-white">
         <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
           <Footer.Brand
-            href="https://flowbite.com"
-            src="https://flowbite.com/docs/images/logo.svg"
+            className="text-white h-12"
+            src={logo}
             alt="Flowbite Logo"
-            name="Flowbite"
+            name="Timeless Rustic Acres"
           />
-          <Footer.LinkGroup>
+          <Footer.LinkGroup className="text-white">
             <Footer.Link href="#">About</Footer.Link>
             <Footer.Link href="#">Privacy Policy</Footer.Link>
-            <Footer.Link href="#">Licensing</Footer.Link>
             <Footer.Link href="#">Contact</Footer.Link>
           </Footer.LinkGroup>
         </div>
         <Footer.Divider />
-        <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+        <Footer.Copyright
+          href="#"
+          by="Timeless Rustic Acres"
+          year={new Date().getFullYear()}
+          className="text-white"
+        />
       </div>
     </Footer>
   );

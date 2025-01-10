@@ -1,3 +1,5 @@
+import { Button } from "flowbite-react";
+
 const Contact = () => {
   return (
     <div className="min-h-screen bg-base">
@@ -84,12 +86,9 @@ const Contact = () => {
               </div>
               <div className="flex justify-between w-full px-3">
                 <div className="md:flex md:items-center"></div>
-                <button
-                  className="shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
-                  type="submit"
-                >
+                <Button className="shadow bg-highlightAccent" type="submit">
                   Send Message
-                </button>
+                </Button>
               </div>
             </div>
           </form>

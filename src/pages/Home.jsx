@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="bg-base ">
       <Hero />
-      <div className="max-w-3xl mx-3 lg:mx-auto md:-mt-24 lg:mt-0 xl:-mt-24">
+      <div className="max-w-3xl px-3 mx-auto ">
         <h3 className="text-3xl mb-3">Welcome to Rustic Acres</h3>
         <h4 className="text-2xl mb-3">
           Your Trusted Source for King Charles Spaniels

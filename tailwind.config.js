@@ -6,14 +6,19 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
+      scale: {
+        99: "0.99",
+        102: "1.02",
+      },
       backgroundImage: {
-        hero: "url('./assets/images/Rustic Acres Hero.svg')",
+        hero: "url('./assets/images/hero-bg.svg')",
       },
       colors: {
         base: "#F7F5F0",
         primaryNeutral: "#2D2D2D",
         primaryAccent: "#B47F52",
-        secondaryNeutral: "#9C8B7C",
+        secondaryNeutral: "#9C8F7C",
+        secondaryAccent: "#4A4A4A",
         highlightAccent: "#C8A26E",
       },
     },
