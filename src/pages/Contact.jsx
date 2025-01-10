@@ -2,7 +2,7 @@ import { Button } from "flowbite-react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-base">
+    <main className="min-h-screen bg-base">
       <div className=" max-w-6xl mx-auto sm:rounded-lg">
         <div className="pt-10">
           <h2 className="text-3xl md:text-5xl font-bold text-center">
@@ -94,7 +94,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default Contact;

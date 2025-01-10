@@ -1,6 +1,7 @@
 import { Button, Navbar } from "flowbite-react";
 import { Link, useLocation } from "react-router-dom";
 import { customButtonTheme } from "./customThemes/buttonTheme";
+import { customNavbarTheme } from "./customThemes/navBarTheme";
 
 import logo from "../assets/images/logo.png";
 
@@ -9,6 +10,7 @@ const Header = () => {
   const path = location.pathname;
   return (
     <Navbar
+      theme={customNavbarTheme}
       fluid
       rounded
       className="px-0 bg-base text-primaryNeutral sticky top-0 z-10 shadow-md shadow-slate-6500"
@@ -16,15 +18,19 @@ const Header = () => {
       <Navbar.Brand>
         <img
           src={logo}
-          className="mr-1  sm:mr-3 h-16 sm:h-24"
-          alt="Rustic Acres Logo"
+          className="sm:mr-3 h-24"
+          alt="Timeless Rustic Acres Logo"
         />
-        <span className="self-center whitespace-nowrap text-xl font-semibold">
-          Rustic Acres
+        <span className="self-center whitespace-nowrap text-xl font-semibold hidden custom:inline">
+          Timeless Rustic Acres
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
-        <Button theme={customButtonTheme} color="button" className="">
+        <Button
+          theme={customButtonTheme}
+          color="button"
+          className="hidden lg:block"
+        >
           Contact Us
         </Button>
         <Navbar.Toggle />

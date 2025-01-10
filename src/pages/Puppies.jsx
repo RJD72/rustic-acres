@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { imageArr } from "../assets/images/imageArr";
 
 const Puppies = () => {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    console.log(imageArr.length);
-  }, []);
 
   const openCarousel = (index) => {
     setActiveIndex(index);

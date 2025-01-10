@@ -10,14 +10,13 @@ const About = () => {
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
               About Us
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-              eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
-              magna quis elit efficitur consequat. Mauris eleifend velit a
-              pretium iaculis. Donec sagittis velit et magna euismod, vel
-              aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
-              arcu volutpat vel.
+            <p className="mt-4 text-lg">
+              Timeless Rustic Acres is located just outside Palmerston Ontario.
+              Our small hobby farm consists of not only raising our beautiful
+              Cavaliers, but also our love for our vegetable gardens and small
+              orchard. We could not ask for anything more.
             </p>
+            <p className="mt-2">Mike and Angie Tokarcyzk</p>
             <div className="mt-8">
               <Link
                 to={"/contact"}

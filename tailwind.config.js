@@ -6,6 +6,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
+      screens: {
+        custom: "1100px",
+      },
       scale: {
         99: "0.99",
         102: "1.02",

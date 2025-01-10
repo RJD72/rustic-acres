@@ -6,15 +6,15 @@ const Hero = () => {
   return (
     <section className=" text-primaryNeutral">
       <div className="bg-hero bg-no-repeat bg-cover">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-5 mx-2 mb-16 lg:max-w-6xl lg:mx-auto lg:pt-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 pt-5 mx-3 lg:px-6 mb-16 lg:max-w-6xl lg:mx-auto lg:pt-28">
           {/* Left Side */}
-          <div className=" w-full flex flex-col justify-center">
-            <h2 className="text-6xl lg:text-6xl xl:text-7xl font-bold mb-3">
+          <div className=" w-full flex flex-col justify-center mb-6">
+            <h2 className="text-7xl font-bold mb-3">
               Timeless
               <br /> Rustic Acres
             </h2>
 
-            <p className="mb-6 ">
+            <p className="mb-6 text-lg">
               Welcome to our family of Cavalier King Charles Spaniels. These
               loving and loyal dogs are ready to bring joy and companionship to
               your home.
