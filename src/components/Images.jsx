@@ -4,15 +4,27 @@ import PuppyImage11 from "../assets/images/puppy-image11.jpg";
 
 const Images = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto pt-10 pb-32 px-3">
-      <div className="rounded-lg">
-        <img src={PuppyImage9} alt="" className="h-full rounded-lg" />
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto  pb-32 px-3">
+      <div className="rounded-lg h-[350px] ">
+        <img
+          src={PuppyImage9}
+          alt=""
+          className="rounded-lg h-full w-full object-cover "
+        />
       </div>
-      <div className="rounded-lg">
-        <img src={PuppyImage10} alt="" className="h-full rounded-lg" />
+      <div className="rounded-lg h-[350px] ">
+        <img
+          src={PuppyImage10}
+          alt=""
+          className="rounded-lg h-full w-full object-cover"
+        />
       </div>
-      <div className="rounded-lg">
-        <img src={PuppyImage11} alt="" className="h-full rounded-lg" />
+      <div className="rounded-lg h-[350px] ">
+        <img
+          src={PuppyImage11}
+          alt=""
+          className="rounded-lg h-full w-full object-cover "
+        />
       </div>
     </div>
   );
