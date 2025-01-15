@@ -5,7 +5,7 @@ const Parents = () => {
   return (
     <main className="min-h-screen bg-base">
       <h1 className="text-3xl md:text-5xl font-bold py-10 text-center">
-        Parents
+        Meet the Gang
       </h1>
       <div className=" flex items-center  ">
         <section className="max-w-6xl  px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-8 items-center justify-center">
