@@ -45,7 +45,7 @@ const Header = () => {
           <Link to={"/puppies"}>Puppy Gallery</Link>
         </Navbar.Link>
         <Navbar.Link active={path === "/parents"}>
-          <Link to={"/parents"}>Meet The Parents</Link>
+          <Link to={"/parents"}>Meet The Gang</Link>
         </Navbar.Link>
         <Navbar.Link active={path === "/about"}>
           <Link to={"/about"}>About Us</Link>

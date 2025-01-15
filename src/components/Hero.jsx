@@ -1,5 +1,5 @@
 import { Button } from "flowbite-react";
-import GroupPhoto from "../assets/images/group-photo.jpg";
+import HeroImage from "../assets/images/hero-image.jpg";
 import { customButtonTheme } from "../customThemes/buttonTheme";
 import { IoIosContact } from "react-icons/io";
 import { LuDog } from "react-icons/lu";
@@ -42,9 +42,9 @@ const Hero = () => {
             </div>
           </div>
           {/* Right Side */}
-          <div className=" w-full flex justify-center">
+          <div className="w-full flex justify-center">
             <div className="shadow-2xl shadow-slate-600 rounded-lg">
-              <img src={GroupPhoto} alt="Group Photo" className="rounded-lg" />
+              <img src={HeroImage} alt="Group Photo" className="rounded-lg" />
             </div>
           </div>
         </div>

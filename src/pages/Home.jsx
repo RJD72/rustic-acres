@@ -1,15 +1,16 @@
 import Hero from "../components/Hero";
-import Image2 from "../assets/images/image2.jpg";
-import Image6 from "../assets/images/image6.jpg";
 
 import BenefitsSection from "../components/BenefitsSection";
+import Images from "../components/Images";
 
 const Home = () => {
   return (
     <main className="bg-base ">
       <Hero />
       <div className="max-w-3xl px-3 mx-auto ">
-        <h3 className="text-5xl mb-5 font-bold">Welcome to Rustic Acres</h3>
+        <h3 className="text-5xl mb-5 font-bold">
+          Welcome to Timeless Rustic Acres
+        </h3>
 
         <p className="mb-3">
           Our country property is the perfect place to raise our family of
@@ -40,14 +41,7 @@ const Home = () => {
         </p>
       </div>
       <BenefitsSection />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto pt-10 pb-32 px-3">
-        <div className="rounded-lg">
-          <img src={Image2} alt="" className="h-full rounded-lg" />
-        </div>
-        <div className="rounded-lg">
-          <img src={Image6} alt="" className="h-full rounded-lg" />
-        </div>
-      </div>
+      <Images />
     </main>
   );
 };
