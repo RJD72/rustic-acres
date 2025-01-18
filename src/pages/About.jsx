@@ -9,7 +9,7 @@ const About = () => {
       </h2>
       <div className="max-w-7xl mx-auto p-4 rounded-lg bg-backgroundColor">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center ">
-          <div className="max-w-lg">
+          <div className="max-w-lg xl:pl-10">
             <p className="mt-4 text-lg">
               Timeless Rustic Acres is located just outside Palmerston Ontario.
               Our small hobby farm consists of not only raising our beautiful
@@ -31,6 +31,7 @@ const About = () => {
           </div>
           <div className="mt-12 md:mt-0">
             <img
+              loading="lazy"
               src={PuppyImage1}
               alt="About Us Image"
               className="object-cover rounded-lg shadow-md"

@@ -7,7 +7,7 @@ const Parents = () => {
         Meet the Gang
       </h1>
       <div className=" flex items-center  ">
-        <section className="max-w-6xl px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-4 items-center justify-center">
+        <section className="max-w-6xl px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-8 items-center justify-center">
           {parents.length > 0 &&
             parents.map((parent) => (
               <div
@@ -16,7 +16,12 @@ const Parents = () => {
               >
                 <figure className="rounded-2xl bg-backgroundColor p-4 shadow-xl shadow-slate-900/10 max-w-md">
                   <div className="overflow-hidden mb-8 rounded-lg">
-                    <img src={parent.src} alt="" className="rounded-lg " />
+                    <img
+                      loading="lazy"
+                      src={parent.src}
+                      alt=""
+                      className="rounded-lg "
+                    />
                   </div>
                   <div className="relative">
                     <blockquote className="relative">

@@ -53,7 +53,6 @@ const Header = () => {
         <Navbar.Link as={Link} to="/parents" active={path === "/parents"}>
           Meet The Gang
         </Navbar.Link>
-        {/* Notice here: active is checking /testimonials instead of /faq */}
         <Navbar.Link
           as={Link}
           to="/testimonials"

@@ -7,12 +7,13 @@ const Home = () => {
   return (
     <main className="bg-base ">
       <Hero />
-      <div className="max-w-3xl px-3 mx-auto ">
+      <div className="max-w-3xl px-3 pt-10 mx-auto ">
         <h3 className="text-5xl mb-5 font-bold">
-          Welcome to Timeless Rustic Acres
+          <span className="inline-block pb-2"> Welcome to</span> <br />
+          <span>Timeless Rustic Acres</span>
         </h3>
 
-        <p className="mb-3">
+        <p className="mb-3 leading-loose">
           Our country property is the perfect place to raise our family of
           Cavalier King Charles Spaniels.
         </p>
