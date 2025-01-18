@@ -8,21 +8,21 @@ const Images = () => {
       <div className="rounded-lg h-[350px] ">
         <img
           src={PuppyImage9}
-          alt=""
+          alt="Puppy image"
           className="rounded-lg h-full w-full object-cover "
         />
       </div>
       <div className="rounded-lg h-[350px] ">
         <img
           src={PuppyImage10}
-          alt=""
-          className="rounded-lg h-full w-full object-cover"
+          alt="Puppy image"
+          className="rounded-lg h-full w-full object-cover "
         />
       </div>
       <div className="rounded-lg h-[350px] ">
         <img
           src={PuppyImage11}
-          alt=""
+          alt="Puppy image"
           className="rounded-lg h-full w-full object-cover "
         />
       </div>

@@ -27,7 +27,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-lightGrey">
+    <section className="py-12 bg-base">
       <div className="max-w-6xl mx-auto text-center px-3">
         <h2 className="text-4xl font-bold text-deepBurgundy mb-6">
           Why Choose a Cavalier King Charles Spaniel?
@@ -40,7 +40,7 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="flex flex-col items-center bg-white p-6 shadow-md rounded-lg hover:shadow-lg transition"
+              className="flex flex-col items-center bg-backgroundColor p-6 shadow-md rounded-lg hover:shadow-lg transition"
             >
               <div className="text-4xl text-softGold mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-semibold text-deepBurgundy mb-3">

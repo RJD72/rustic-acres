@@ -26,10 +26,8 @@ const Puppies = () => {
 
   return (
     <div className="min-h-screen bg-base">
-      <h2 className="text-3xl md:text-5xl font-bold py-10 text-center">
-        Puppies
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4 pb-32 max-w-6xl mx-auto">
+      <h2 className="text-5xl font-bold py-10 text-center">Puppies</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4 px-3 pb-32 max-w-6xl mx-auto">
         {imageArr.length > 0 ? (
           imageArr.map((img, index) => (
             <div

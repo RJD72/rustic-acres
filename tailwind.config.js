@@ -6,6 +6,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
+      fontFamily: {
+        sassy: ["Sassy Frass", "sans-serif"],
+      },
       screens: {
         custom: "1100px",
       },
@@ -23,6 +26,7 @@ export default {
         secondaryNeutral: "#9C8F7C",
         secondaryAccent: "#4A4A4A",
         highlightAccent: "#C8A26E",
+        backgroundColor: "#ECE7DF",
       },
     },
   },

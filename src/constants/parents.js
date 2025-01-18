@@ -22,7 +22,7 @@ export const parents = [
   {
     id: 3,
     name: "Miss Cleo",
-    description: "The dedicated mon",
+    description: "The dedicated mom",
     gender: "female",
     src: missCleo,
   },
