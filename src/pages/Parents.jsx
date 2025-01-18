@@ -7,7 +7,7 @@ const Parents = () => {
         Meet the Gang
       </h1>
       <div className=" flex items-center  ">
-        <section className="max-w-6xl px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-8 items-center justify-center">
+        <section className="max-w-6xl px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-4 items-center justify-center">
           {parents.length > 0 &&
             parents.map((parent) => (
               <div

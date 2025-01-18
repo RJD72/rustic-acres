@@ -1,6 +1,11 @@
+import ModalComponent from "../components/ModalComponent";
 import { testimonials } from "../constants/testimonials";
+import { useState } from "react";
 
 const Testimonials = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+
   return (
     <div className="min-h-screen bg-base">
       <main className="min-h-screen bg-base">
@@ -8,7 +13,7 @@ const Testimonials = () => {
           Testimonials
         </h1>
         <div className="">
-          <section className="max-w-6xl px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-8 items-center justify-center">
+          <section className="max-w-6xl px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-4 items-center justify-center">
             {testimonials.length > 0 &&
               testimonials.map((testimonial) => (
                 <div
@@ -37,6 +42,17 @@ const Testimonials = () => {
                         <p className="text-lg tracking-tight text-slate-900 line-clamp-6">
                           {testimonial.testimonial}
                         </p>
+                        <a
+                          href="#"
+                          className="mt-2 inline-block text-blue-600 hover:underline"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setSelectedTestimonial(testimonial.testimonial);
+                            setOpenModal(true);
+                          }}
+                        >
+                          Read More
+                        </a>
                       </blockquote>
                     </div>
                     <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
@@ -53,6 +69,11 @@ const Testimonials = () => {
           </section>
         </div>
       </main>
+      <ModalComponent
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        testimonial={selectedTestimonial}
+      />
     </div>
   );
 };
