@@ -16,7 +16,9 @@ const About = () => {
               Cavaliers, but also our love for our vegetable gardens and small
               orchard. We could not ask for anything more.
             </p>
-            <p className="mt-6 font-sassy text-5xl">Mike and Angie Tokarcyzk</p>
+            <p className="mt-6 font-sassy text-4xl md:text-5xl">
+              Mike and Angie Tokarcyzk
+            </p>
             <div className="mt-8">
               <Link
                 to={"/contact"}

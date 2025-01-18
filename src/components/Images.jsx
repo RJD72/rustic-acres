@@ -4,7 +4,7 @@ import PuppyImage11 from "../assets/images/puppy-image11.jpg";
 
 const Images = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto pb-32 px-3">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto pb-32 px-3 mt-20">
       <div className="rounded-lg h-[350px] ">
         <img
           src={PuppyImage9}

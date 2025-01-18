@@ -27,7 +27,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-base">
+    <section className="py-12 bg-base mt-16">
       <div className="max-w-6xl mx-auto text-center px-3">
         <h2 className="text-4xl font-bold text-deepBurgundy mb-6">
           Why Choose a Cavalier King Charles Spaniel?

@@ -9,13 +9,15 @@ import logo from "../assets/images/logo.png";
 const Header = () => {
   const location = useLocation();
   const path = location.pathname;
+
   return (
     <Navbar
       theme={customNavbarTheme}
       fluid
       rounded
-      className="px-0 bg-base text-primaryNeutral sticky top-0 z-10 shadow-md shadow-slate-6500"
+      className="px-0 bg-base text-primaryNeutral sticky top-0 z-10 shadow-md"
     >
+      {/* Brand / Logo */}
       <Navbar.Brand>
         <img
           src={logo}
@@ -26,36 +28,44 @@ const Header = () => {
           Timeless Rustic Acres
         </span>
       </Navbar.Brand>
+
+      {/* Right Section */}
       <div className="flex md:order-2">
         <Button
           theme={customButtonTheme}
           color="button"
-          className="hidden lg:block "
+          className="hidden lg:block"
         >
           <IoIosContact size={20} className="mr-2" />
           Contact Us
         </Button>
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link active={path === "/"} as={"div"}>
-          <Link to={"/"}>Home</Link>
-        </Navbar.Link>
-        <Navbar.Link active={path === "/puppies"}>
-          <Link to={"/puppies"}>Puppy Gallery</Link>
-        </Navbar.Link>
-        <Navbar.Link active={path === "/parents"}>
-          <Link to={"/parents"}>Meet The Gang</Link>
-        </Navbar.Link>
 
-        <Navbar.Link active={path === "/faq"}>
-          <Link to={"/testimonials"}>Testimonials</Link>
+      {/* Nav Links */}
+      <Navbar.Collapse>
+        <Navbar.Link as={Link} to="/" active={path === "/"}>
+          Home
         </Navbar.Link>
-        <Navbar.Link active={path === "/about"}>
-          <Link to={"/about"}>About Us</Link>
+        <Navbar.Link as={Link} to="/puppies" active={path === "/puppies"}>
+          Puppy Gallery
         </Navbar.Link>
-        <Navbar.Link active={path === "/contact"} as={"div"}>
-          <Link to={"/contact"}>Contact</Link>
+        <Navbar.Link as={Link} to="/parents" active={path === "/parents"}>
+          Meet The Gang
+        </Navbar.Link>
+        {/* Notice here: active is checking /testimonials instead of /faq */}
+        <Navbar.Link
+          as={Link}
+          to="/testimonials"
+          active={path === "/testimonials"}
+        >
+          Testimonials
+        </Navbar.Link>
+        <Navbar.Link as={Link} to="/about" active={path === "/about"}>
+          About Us
+        </Navbar.Link>
+        <Navbar.Link as={Link} to="/contact" active={path === "/contact"}>
+          Contact
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
