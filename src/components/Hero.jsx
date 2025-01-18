@@ -3,6 +3,7 @@ import HeroImage from "../assets/images/hero-image.jpg";
 import { customButtonTheme } from "../customThemes/buttonTheme";
 import { IoIosContact } from "react-icons/io";
 import { LuDog } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -22,23 +23,27 @@ const Hero = () => {
               your home.
             </p>
             <div className="flex flex-col md:flex-row gap-3">
-              <Button
-                theme={customButtonTheme}
-                outline
-                color="button"
-                className="flex items-center justify-center"
-              >
-                <LuDog size={20} className="mr-2" />
-                Puppy Gallery
-              </Button>
-              <Button
-                theme={customButtonTheme}
-                color="button"
-                className="flex items-center justify-center"
-              >
-                <IoIosContact size={20} className="mr-2" />
-                Contact Us
-              </Button>
+              <Link to="/puppies">
+                <Button
+                  theme={customButtonTheme}
+                  outline
+                  color="button"
+                  className="flex items-center justify-center"
+                >
+                  <LuDog size={20} className="mr-2" />
+                  Puppy Gallery
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button
+                  theme={customButtonTheme}
+                  color="button"
+                  className="flex items-center justify-center"
+                >
+                  <IoIosContact size={20} className="mr-2" />
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
           {/* Right Side */}

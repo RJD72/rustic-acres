@@ -21,7 +21,7 @@ const About = () => {
             </p>
             <div className="mt-8">
               <Link
-                to={"/contact"}
+                to="/contact"
                 className="text-blue-500 hover:text-blue-600 font-medium hover:underline"
               >
                 Learn more about us

@@ -1,4 +1,5 @@
 import { Footer } from "flowbite-react";
+import { Link } from "react-router-dom";
 import { customFooterTheme } from "../customThemes/footerTheme";
 import logo from "../assets/images/logo.png";
 
@@ -14,9 +15,13 @@ const FooterComponent = () => {
             name="Timeless Rustic Acres"
           />
           <Footer.LinkGroup className="text-white">
-            <Footer.Link href="#">About</Footer.Link>
+            <Footer.Link as={Link} to="/about">
+              About
+            </Footer.Link>
             <Footer.Link href="#">Privacy Policy</Footer.Link>
-            <Footer.Link href="#">Contact</Footer.Link>
+            <Footer.Link as={Link} to="/contact">
+              Contact
+            </Footer.Link>
           </Footer.LinkGroup>
         </div>
         <Footer.Divider />

@@ -1,8 +1,50 @@
 import { Button } from "flowbite-react";
 import { customButtonTheme } from "../customThemes/buttonTheme";
 import { BsSend } from "react-icons/bs";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const userId = import.meta.env.VITE_EMAILJS_USER_ID;
+const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 const Contact = () => {
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const form = useRef();
+
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!captchaToken) {
+      alert("Please verify the reCAPTCHA");
+      return;
+    }
+
+    try {
+      emailjs
+        .sendForm(serviceId, templateId, form.current, { publicKey: userId })
+        .then(
+          (result) => {
+            console.log("Email sent successfully:", result.text);
+            alert("Message sent!");
+            form.current.reset();
+          },
+          (error) => {
+            console.error("Error sending email:", error.text);
+            alert("Failed to send message.");
+          }
+        );
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-base px-3 pb-32">
       <div className=" max-w-6xl mx-auto sm:rounded-lg">
@@ -25,18 +67,23 @@ const Contact = () => {
               answer all your inquiries.
             </p>
           </div>
-          <form className="md:col-span-8 pt-16 md:p-10">
+          <form
+            ref={form}
+            onSubmit={handleSubmit}
+            className="md:col-span-8 pt-16 md:pl-10"
+          >
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  htmlFor="grid-first-name"
+                  htmlFor="firstName"
                 >
                   First Name
                 </label>
                 <input
                   className="appearance-none block w-full  text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
+                  id="firstName"
+                  name="firstName"
                   type="text"
                   placeholder="Jane"
                 />
@@ -44,13 +91,14 @@ const Contact = () => {
               <div className="w-full md:w-1/2 px-3">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  htmlFor="grid-last-name"
+                  htmlFor="lastName"
                 >
                   Last Name
                 </label>
                 <input
                   className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-last-name"
+                  id="lastName"
+                  name="lastName"
                   type="text"
                   placeholder="Doe"
                 />
@@ -60,13 +108,14 @@ const Contact = () => {
               <div className="w-full px-3">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  htmlFor="grid-password"
+                  htmlFor="email"
                 >
                   Email Address
                 </label>
                 <input
                   className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-email"
+                  id="email"
+                  name="email"
                   type="email"
                   placeholder="email@email.com"
                 />
@@ -77,21 +126,28 @@ const Contact = () => {
               <div className="w-full px-3">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  htmlFor="grid-password"
+                  htmlFor="message"
                 >
                   Your Message
                 </label>
                 <textarea
+                  id="message"
+                  name="message"
                   rows="10"
                   className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 ></textarea>
               </div>
-              <div className="flex justify-between w-full px-3 mt-3">
-                <div className="md:flex md:items-center"></div>
+              <ReCAPTCHA
+                sitekey={recaptchaSiteKey}
+                onChange={handleCaptchaChange}
+                className="mt-5 ml-3"
+              />
+              <div className="flex justify-center w-full px-3 mt-3">
+                {/* <div className="md:flex md:items-center"></div> */}
                 <Button
                   theme={customButtonTheme}
                   color="button"
-                  className="flex items-center justify-center"
+                  className="flex items-center justify-center mt-3 w-full sm:max-w-fit"
                   type="submit"
                 >
                   <BsSend size={20} className="mr-2" />
@@ -105,4 +161,5 @@ const Contact = () => {
     </main>
   );
 };
+
 export default Contact;

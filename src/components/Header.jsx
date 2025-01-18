@@ -19,11 +19,13 @@ const Header = () => {
     >
       {/* Brand / Logo */}
       <Navbar.Brand>
-        <img
-          src={logo}
-          className="sm:mr-3 h-24"
-          alt="Timeless Rustic Acres Logo"
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            className="sm:mr-3 h-24"
+            alt="Timeless Rustic Acres Logo"
+          />
+        </Link>
         <span className="self-center whitespace-nowrap text-xl font-semibold hidden custom:inline">
           Timeless Rustic Acres
         </span>
@@ -31,15 +33,17 @@ const Header = () => {
 
       {/* Right Section */}
       <div className="flex md:order-2">
-        <Button
-          theme={customButtonTheme}
-          color="button"
-          className="hidden lg:block"
-        >
-          <IoIosContact size={20} className="mr-2" />
-          Contact Us
-        </Button>
-        <Navbar.Toggle />
+        <Link to="/contact">
+          <Button
+            theme={customButtonTheme}
+            color="button"
+            className="hidden lg:block"
+          >
+            <IoIosContact size={20} className="mr-2" />
+            Contact Us
+          </Button>
+          <Navbar.Toggle />
+        </Link>
       </div>
 
       {/* Nav Links */}
