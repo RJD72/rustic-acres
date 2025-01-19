@@ -7,14 +7,14 @@ const Parents = () => {
         Meet the Gang
       </h1>
       <div className=" flex items-center  ">
-        <section className="max-w-6xl px-3 mx-auto pt-4 pb-32 flex flex-wrap gap-8 items-center justify-center">
+        <section className="max-w-6xl p-2 mx-auto pb-32 flex flex-wrap gap-8 items-center justify-center">
           {parents.length > 0 &&
             parents.map((parent) => (
               <div
                 key={parent.id}
                 className="hover:shadow-lg transition rounded-2xl"
               >
-                <figure className="rounded-2xl bg-backgroundColor p-4 shadow-xl shadow-slate-900/10 max-w-md">
+                <figure className="rounded-2xl bg-backgroundColor p-2 sm:p-4 shadow-xl shadow-slate-900/10 max-w-md">
                   <div className="overflow-hidden mb-8 rounded-lg">
                     <img
                       loading="lazy"

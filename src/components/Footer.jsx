@@ -18,7 +18,9 @@ const FooterComponent = () => {
             <Footer.Link as={Link} to="/about">
               About
             </Footer.Link>
-            <Footer.Link href="#">Privacy Policy</Footer.Link>
+            <Footer.Link as={Link} to="/privacy-policy">
+              Privacy Policy
+            </Footer.Link>
             <Footer.Link as={Link} to="/contact">
               Contact
             </Footer.Link>

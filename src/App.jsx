@@ -9,6 +9,7 @@ import Puppies from "./pages/Puppies";
 import Testimonials from "./pages/Testimonials";
 import About from "./pages/About";
 import Parents from "./pages/Parents.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/about" element={<About />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <FooterComponent />
     </BrowserRouter>

@@ -28,7 +28,7 @@ const Hero = () => {
                   theme={customButtonTheme}
                   outline
                   color="button"
-                  className="flex items-center justify-center"
+                  className="flex items-center justify-center w-full "
                 >
                   <LuDog size={20} className="mr-2" />
                   Puppy Gallery
@@ -38,7 +38,7 @@ const Hero = () => {
                 <Button
                   theme={customButtonTheme}
                   color="button"
-                  className="flex items-center justify-center"
+                  className="flex items-center justify-center w-full "
                 >
                   <IoIosContact size={20} className="mr-2" />
                   Contact Us

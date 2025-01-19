@@ -46,14 +46,12 @@ const Contact = () => {
   };
 
   return (
-    <main className="min-h-screen bg-base px-3 pb-32">
+    <main className="min-h-screen bg-base px-2 pb-32">
       <div className=" max-w-6xl mx-auto sm:rounded-lg">
         <div className="">
-          <h2 className="text-3xl md:text-5xl font-bold text-center py-10">
-            Contact
-          </h2>
+          <h2 className="text-5xl font-bold text-center py-10">Contact</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-12 px-3 py-4 md:p-4 max-w-6xl bg-backgroundColor rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-12 p-2 sm:p-4 max-w-6xl bg-backgroundColor rounded-lg">
           <div className="bg-secondaryNeutral md:col-span-4 p-10 rounded-lg">
             <p className="mt-4 text-sm leading-7 font-regular uppercase">
               Contact
@@ -137,11 +135,12 @@ const Contact = () => {
                   className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 ></textarea>
               </div>
-              <ReCAPTCHA
-                sitekey={recaptchaSiteKey}
-                onChange={handleCaptchaChange}
-                className="mt-5 ml-3"
-              />
+              <div className="mt-5 flex justify-center items-center w-full">
+                <ReCAPTCHA
+                  sitekey={recaptchaSiteKey}
+                  onChange={handleCaptchaChange}
+                />
+              </div>
               <div className="flex justify-center w-full px-3 mt-3">
                 {/* <div className="md:flex md:items-center"></div> */}
                 <Button

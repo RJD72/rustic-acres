@@ -42,8 +42,8 @@ const Header = () => {
             <IoIosContact size={20} className="mr-2" />
             Contact Us
           </Button>
-          <Navbar.Toggle />
         </Link>
+        <Navbar.Toggle />
       </div>
 
       {/* Nav Links */}
