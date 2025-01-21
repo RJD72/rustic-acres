@@ -25,7 +25,7 @@ const Testimonials = () => {
                       <img
                         loading="lazy"
                         src={testimonial.src}
-                        alt=""
+                        alt={testimonial.name}
                         className="rounded-lg "
                       />
                     </div>

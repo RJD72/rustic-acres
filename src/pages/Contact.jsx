@@ -4,6 +4,8 @@ import { BsSend } from "react-icons/bs";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import DOMPurify from "dompurify"; // Import DOMPurify
+import { useNavigate } from "react-router-dom";
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -13,6 +15,7 @@ const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 const Contact = () => {
   const [captchaToken, setCaptchaToken] = useState(null);
   const form = useRef();
+  const navigate = useNavigate();
 
   const handleCaptchaChange = (token) => {
     setCaptchaToken(token);
@@ -26,14 +29,31 @@ const Contact = () => {
       return;
     }
 
+    // Collect form data
+    const formData = new FormData(form.current);
+
+    // Sanitize input fields
+    const sanitizedData = {
+      firstName: DOMPurify.sanitize(formData.get("firstName")),
+      lastName: DOMPurify.sanitize(formData.get("lastName")),
+      email: DOMPurify.sanitize(formData.get("email")),
+      message: DOMPurify.sanitize(formData.get("message")),
+    };
+
     try {
       emailjs
-        .sendForm(serviceId, templateId, form.current, { publicKey: userId })
+        .send(
+          serviceId,
+          templateId,
+          sanitizedData, // Send sanitized data
+          userId
+        )
         .then(
           (result) => {
             console.log("Email sent successfully:", result.text);
             alert("Message sent!");
             form.current.reset();
+            navigate("/");
           },
           (error) => {
             console.error("Error sending email:", error.text);
@@ -41,14 +61,15 @@ const Contact = () => {
           }
         );
     } catch (error) {
-      alert(error.message);
+      console.error("Unexpected error:", error.message);
+      alert("Unexpected error occurred.");
     }
   };
 
   return (
     <main className="min-h-screen bg-base px-2 pb-32">
-      <div className=" max-w-6xl mx-auto sm:rounded-lg">
-        <div className="">
+      <div className="max-w-6xl mx-auto sm:rounded-lg">
+        <div>
           <h2 className="text-5xl font-bold text-center py-10">Contact</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 p-2 sm:p-4 max-w-6xl bg-backgroundColor rounded-lg">
@@ -79,11 +100,12 @@ const Contact = () => {
                   First Name
                 </label>
                 <input
-                  className="appearance-none block w-full  text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="firstName"
                   name="firstName"
                   type="text"
                   placeholder="Jane"
+                  required
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
@@ -99,6 +121,7 @@ const Contact = () => {
                   name="lastName"
                   type="text"
                   placeholder="Doe"
+                  required
                 />
               </div>
             </div>
@@ -111,15 +134,15 @@ const Contact = () => {
                   Email Address
                 </label>
                 <input
-                  className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="email"
                   name="email"
                   type="email"
                   placeholder="email@email.com"
+                  required
                 />
               </div>
             </div>
-
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full px-3">
                 <label
@@ -132,7 +155,8 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows="10"
-                  className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  required
                 ></textarea>
               </div>
               <div className="mt-5 flex justify-center items-center w-full">
@@ -142,7 +166,6 @@ const Contact = () => {
                 />
               </div>
               <div className="flex justify-center w-full px-3 mt-3">
-                {/* <div className="md:flex md:items-center"></div> */}
                 <Button
                   theme={customButtonTheme}
                   color="button"
