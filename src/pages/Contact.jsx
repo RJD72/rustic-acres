@@ -82,7 +82,7 @@ const Contact = () => {
             </h3>
             <p className="mt-4 leading-7">
               We’d love to hear from you! Whether you have a question about our
-              puppies, adoption process, or anything else, our team is ready to
+              puppies, adoption process, or anything else, we are ready to
               answer all your inquiries.
             </p>
           </div>
