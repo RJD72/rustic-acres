@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useLocation, Routes, Route } from "react-router-dom";
+
 import { initGA, logPageView } from "./analytics.js";
 
 import FooterComponent from "./components/Footer";
@@ -23,7 +23,7 @@ const App = () => {
   }, [location]);
 
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Header />
       <Routes>
@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <FooterComponent />
-    </BrowserRouter>
+    </>
   );
 };
 export default App;
