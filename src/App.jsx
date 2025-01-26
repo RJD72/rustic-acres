@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { initGA, logPageView } from "./analytics.js";
 
 import FooterComponent from "./components/Footer";
 import Header from "./components/Header.jsx";
@@ -10,8 +12,16 @@ import Testimonials from "./pages/Testimonials";
 import About from "./pages/About";
 import Parents from "./pages/Parents.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import { useEffect } from "react";
 
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    initGA();
+    logPageView(location.pathname); // Log on every route change
+  }, [location]);
+
   return (
     <BrowserRouter>
       <ScrollToTop />
