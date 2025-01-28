@@ -27,12 +27,27 @@ jobs:
           npm run build
 
       # Step 4: Deploy the dist folder to the deploy branch
-      - name: Deploy to deploy branch
+      - name: Deploy dist to deploy branch
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add dist -f
-          git commit -m "Deploy to deploy branch"
-          git push --force origin `git subtree split --prefix dist main`:deploy
+
+          # Switch to the deploy branch
+          git fetch origin
+          git checkout deploy
+
+          # Remove all files to ensure a clean deploy
+          git rm -r --cached .
+          git clean -fd
+
+          # Copy the contents of the dist folder
+          cp -r dist/* .
+
+          # Add and commit changes
+          git add .
+          git commit -m "Update deployment from dist folder"
+
+          # Push changes to deploy branch
+          git push --force origin deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
