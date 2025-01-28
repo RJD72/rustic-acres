@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://rustic-acres.netlify.app/sitemap.xml
