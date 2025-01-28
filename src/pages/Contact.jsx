@@ -7,10 +7,10 @@ import ReCAPTCHA from "react-google-recaptcha";
 import DOMPurify from "dompurify"; // Import DOMPurify
 import { useNavigate } from "react-router-dom";
 
-const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const userId = import.meta.env.VITE_EMAILJS_USER_ID;
-const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+const serviceId = "service_ua0yf3n";
+const templateId = "emplate_h6fbeib";
+const userId = "Jior_QbrDD4bwnVAg";
+const recaptchaSiteKey = "6LcEj7sqAAAAAKZHjSYSMNHIDJSaAg17JglowJNb";
 
 const Contact = () => {
   const [captchaToken, setCaptchaToken] = useState(null);
