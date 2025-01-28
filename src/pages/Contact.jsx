@@ -51,7 +51,7 @@ const Contact = () => {
         .then(
           (result) => {
             console.log("Email sent successfully:", result.text);
-            alert("Message sent!");
+            alert("Message sent successfully!");
             form.current.reset();
             navigate("/");
           },
