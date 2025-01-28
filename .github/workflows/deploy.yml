@@ -34,3 +34,5 @@ jobs:
           git add dist -f
           git commit -m "Deploy to deploy branch"
           git push --force origin `git subtree split --prefix dist main`:deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
