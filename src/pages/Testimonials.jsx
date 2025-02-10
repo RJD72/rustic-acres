@@ -1,6 +1,7 @@
 import ModalComponent from "../components/ModalComponent";
 import { testimonials } from "../constants/testimonials";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Testimonials = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -8,6 +9,19 @@ const Testimonials = () => {
 
   return (
     <div className="min-h-screen bg-base">
+      <Helmet>
+        <title>
+          Happy Families | Timeless Rustic Acres – Puppy Owner Reviews
+        </title>
+        <meta
+          name="description"
+          content="Read testimonials from happy families who found their perfect Cavalier King Charles Spaniel at Timeless Rustic Acres. See why our puppies are so loved!"
+        />
+        <link
+          rel="canonical"
+          href="https://timelessrusticacres.com/testimonials"
+        />
+      </Helmet>
       <main className="min-h-screen bg-base">
         <h1 className="text-5xl font-bold px-3 py-10 text-center">
           Testimonials

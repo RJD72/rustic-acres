@@ -1,17 +1,26 @@
 import Hero from "../components/Hero";
-
+import { Helmet } from "react-helmet-async";
 import BenefitsSection from "../components/BenefitsSection";
 import Images from "../components/Images";
 
 const Home = () => {
   return (
     <main className="bg-base ">
+      <Helmet>
+        <title>
+          Timeless Rustic Acres | Ethical Cavalier King Charles Spaniel Breeders
+        </title>
+        <meta
+          name="description"
+          content="Welcome to Timeless Rustic Acres, dedicated breeders of Cavalier King Charles Spaniels. Our puppies are vet-inspected, microchipped, and raised with love. Find your perfect companion today!"
+        />
+      </Helmet>
       <Hero />
       <div className="max-w-3xl px-3 pt-10 mx-auto ">
-        <h3 className="text-5xl mb-5 font-bold">
+        <h2 className="text-5xl mb-5 font-bold">
           <span className="inline-block pb-2"> Welcome to</span> <br />
           <span>Timeless Rustic Acres</span>
-        </h3>
+        </h2>
 
         <p className="mb-3 leading-loose">
           Our country property is the perfect place to raise our family of
@@ -28,8 +37,16 @@ const Home = () => {
           affection.
         </p>
         <p className="mb-3">
-          We are registered members of the Canadian Kennel Club (CKC) and our
-          kennel is inspected regularly.
+          We are registered members of the{" "}
+          <a
+            href="https://www.ckc.ca/Choosing-a-Dog/PuppyList/Breeder.aspx?id=10145&breedcode=CKC"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            Canadian Kennel Club (CKC)
+          </a>{" "}
+          and our kennel is inspected regularly.
         </p>
         <p className="mb-3">
           All of our puppies are vet checked, dewormed, vaccinated and given

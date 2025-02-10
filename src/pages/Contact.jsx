@@ -6,9 +6,10 @@ import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import DOMPurify from "dompurify"; // Import DOMPurify
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const serviceId = "service_ua0yf3n";
-const templateId = "emplate_h6fbeib";
+const templateId = "template_h6fbeib";
 const userId = "Jior_QbrDD4bwnVAg";
 const recaptchaSiteKey = "6LcEj7sqAAAAAKZHjSYSMNHIDJSaAg17JglowJNb";
 
@@ -68,9 +69,17 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen bg-base px-2 pb-32">
+      <Helmet>
+        <title>Contact Us | Timeless Rustic Acres – Get in Touch Today</title>
+        <meta
+          name="description"
+          content="Have questions about our Cavalier King Charles Spaniel puppies? Contact Timeless Rustic Acres today! We’re happy to help you find your perfect furry friend."
+        />
+        <link rel="canonical" href="https://timelessrusticacres.com/contact" />
+      </Helmet>
       <div className="max-w-6xl mx-auto sm:rounded-lg">
         <div>
-          <h2 className="text-5xl font-bold text-center py-10">Contact</h2>
+          <h1 className="text-5xl font-bold text-center py-10">Contact</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 p-2 sm:p-4 max-w-6xl bg-backgroundColor rounded-lg">
           <div className="bg-secondaryNeutral md:col-span-4 p-10 rounded-lg">

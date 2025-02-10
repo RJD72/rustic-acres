@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy = () => {
   return (
     <main className="bg-base">
+      <Helmet>
+        <title>
+          Privacy Policy | Timeless Rustic Acres – Your Data, Our Commitment
+        </title>
+        <meta
+          name="description"
+          content="Read the privacy policy of Timeless Rustic Acres to understand how we collect, use, and protect your personal information when you visit our website or contact us."
+        />
+        <link
+          rel="canonical"
+          href="https://timelessrusticacres.com/privacy-policy"
+        />
+      </Helmet>
       <div className="max-w-3xl mx-auto p-2 text-gray-800 bg-base pb-32 py-10">
         <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
         <p className="mb-4">

@@ -29,9 +29,9 @@ const BenefitsSection = () => {
   return (
     <section className="py-12 bg-base mt-16">
       <div className="max-w-6xl mx-auto text-center px-3">
-        <h2 className="text-4xl font-bold text-deepBurgundy mb-6">
+        <h3 className="text-4xl font-bold text-deepBurgundy mb-6">
           Why Choose a Cavalier King Charles Spaniel?
-        </h2>
+        </h3>
         <p className="text-lg text-gray-700 mb-10">
           These delightful dogs are loved worldwide for their charming
           personalities and lovable traits.

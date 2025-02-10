@@ -10,7 +10,7 @@ export const customNavbarTheme = {
       off: "",
     },
     inner: {
-      base: "mx-auto flex flex-wrap items-center justify-between",
+      base: "mx-auto flex flex-wrap  items-center justify-between",
       fluid: {
         on: "",
         off: "container",

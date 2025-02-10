@@ -9,13 +9,13 @@ const Hero = () => {
   return (
     <section className=" text-primaryNeutral">
       <div className="bg-hero bg-no-repeat bg-cover">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-8 pt-20 mx-3 lg:px-6 mb-16 lg:max-w-6xl lg:mx-auto lg:pt-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-8 pt-8 mx-3 lg:px-6 mb-16 lg:max-w-6xl lg:mx-auto lg:pt-16">
           {/* Left Side */}
           <div className=" w-full flex flex-col justify-center mb-6">
-            <h2 className="text-7xl font-bold mb-3">
+            <h1 className="text-7xl font-bold mb-3">
               Timeless
               <br /> Rustic Acres
-            </h2>
+            </h1>
 
             <p className="mb-6 text-lg">
               Welcome to our family of Cavalier King Charles Spaniels. These

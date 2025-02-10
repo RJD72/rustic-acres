@@ -26,7 +26,7 @@ const Header = () => {
             alt="Timeless Rustic Acres Logo"
           />
         </Link>
-        <span className="self-center whitespace-nowrap text-xl font-semibold hidden custom:inline">
+        <span className="text-xl font-semibold hidden custom:inline">
           Timeless Rustic Acres
         </span>
       </Navbar.Brand>

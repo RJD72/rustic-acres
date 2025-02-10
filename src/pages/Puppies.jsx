@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { imageArr } from "../assets/images/imageArr";
+import { Helmet } from "react-helmet-async";
 
 const Puppies = () => {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
@@ -25,8 +26,18 @@ const Puppies = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base px-2 pb-32">
-      <h2 className="text-5xl font-bold py-10 text-center">Puppies</h2>
+    <main className="min-h-screen bg-base px-2 pb-32">
+      <Helmet>
+        <title>
+          Cavalier King Charles Puppy Gallery | Timeless Rustic Acres
+        </title>
+        <meta
+          name="description"
+          content="Browse our adorable Cavalier King Charles Spaniel puppies! All puppies are vet-inspected, microchipped, and raised with love at Timeless Rustic Acres."
+        />
+        <link rel="canonical" href="https://timelessrusticacres.com/puppies" />
+      </Helmet>
+      <h1 className="text-5xl font-bold py-10 text-center">Puppies</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2 sm:p-4 max-w-6xl mx-auto bg-backgroundColor rounded-lg ">
         {imageArr.length > 0 ? (
           imageArr.map((img, index) => (
@@ -78,7 +89,7 @@ const Puppies = () => {
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

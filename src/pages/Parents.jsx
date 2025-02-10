@@ -1,8 +1,20 @@
 import { parents } from "../constants/parents";
+import { Helmet } from "react-helmet-async";
 
 const Parents = () => {
   return (
     <main className="min-h-screen bg-base">
+      <Helmet>
+        <title>
+          Meet the Parents | Timeless Rustic Acres – Our Cavalier King Charles
+          Lineage
+        </title>
+        <meta
+          name="description"
+          content="Get to know the loving and health-tested parents of our Cavalier King Charles Spaniel puppies. Vet-checked, microchipped, and ethically bred for excellent temperament."
+        />
+        <link rel="canonical" href="https://timelessrusticacres.com/parents" />
+      </Helmet>
       <h1 className="text-5xl font-bold px-3 py-10 text-center">
         Meet the Gang
       </h1>
