@@ -9,6 +9,7 @@ import puppyImage8 from "../images/puppy-image8.jpg";
 import puppyImage9 from "../images/puppy-image9.jpg";
 import puppyImage10 from "../images/puppy-image10.jpg";
 import puppyImage11 from "../images/puppy-image11.jpg";
+import new_puppies from "../images/new_puppies.jpg";
 
 export const imageArr = [
   puppyImage1,
@@ -22,4 +23,5 @@ export const imageArr = [
   puppyImage9,
   puppyImage10,
   puppyImage11,
+  new_puppies,
 ];

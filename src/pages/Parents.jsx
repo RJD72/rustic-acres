@@ -13,7 +13,7 @@ const Parents = () => {
           name="description"
           content="Get to know the loving and health-tested parents of our Cavalier King Charles Spaniel puppies. Vet-checked, microchipped, and ethically bred for excellent temperament."
         />
-        <link rel="canonical" href="https://timelessrusticacres.com/parents" />
+        <link rel="canonical" href={window.location.href} />
       </Helmet>
       <h1 className="text-5xl font-bold px-3 py-10 text-center">
         Meet the Gang

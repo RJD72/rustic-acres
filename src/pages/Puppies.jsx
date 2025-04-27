@@ -35,7 +35,7 @@ const Puppies = () => {
           name="description"
           content="Browse our adorable Cavalier King Charles Spaniel puppies! All puppies are vet-inspected, microchipped, and raised with love at Timeless Rustic Acres."
         />
-        <link rel="canonical" href="https://timelessrusticacres.com/puppies" />
+        <link rel="canonical" href={window.location.href} />
       </Helmet>
       <h1 className="text-5xl font-bold py-10 text-center">Puppies</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2 sm:p-4 max-w-6xl mx-auto bg-backgroundColor rounded-lg ">

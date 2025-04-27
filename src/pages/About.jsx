@@ -14,7 +14,7 @@ const About = () => {
           name="description"
           content="Learn more about Timeless Rustic Acres, our passion for Cavalier King Charles Spaniels, and our commitment to ethical, vet-inspected, and microchipped puppy breeding."
         />
-        <link rel="canonical" href="https://timelessrusticacres.com/about" />
+        <link rel="canonical" href={window.location.href} />
       </Helmet>
       <h1 className="text-5xl font-bold py-10 text-center">About Us</h1>
       <div className="max-w-7xl mx-auto p-2 sm:p-4 rounded-lg bg-backgroundColor">

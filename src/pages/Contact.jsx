@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { Button } from "flowbite-react";
 import { customButtonTheme } from "../customThemes/buttonTheme";
 import { BsSend } from "react-icons/bs";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import DOMPurify from "dompurify"; // Import DOMPurify
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -11,29 +12,26 @@ import { Helmet } from "react-helmet-async";
 const serviceId = "service_ua0yf3n";
 const templateId = "template_h6fbeib";
 const userId = "Jior_QbrDD4bwnVAg";
-const recaptchaSiteKey = "6LcEj7sqAAAAAKZHjSYSMNHIDJSaAg17JglowJNb";
+// const recaptchaSiteKey = "6Lc-JOAqAAAAAJiq_Ix6dBOZaq2jL-Gyv7e_oBlQ";
 
 const Contact = () => {
-  const [captchaToken, setCaptchaToken] = useState(null);
+  // const [captchaToken, setCaptchaToken] = useState(null);
   const form = useRef();
   const navigate = useNavigate();
 
-  const handleCaptchaChange = (token) => {
-    setCaptchaToken(token);
-  };
+  // const handleCaptchaChange = (token) => {
+  //   setCaptchaToken(token);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!captchaToken) {
-      alert("Please verify the reCAPTCHA");
-      return;
-    }
+    // if (!captchaToken) {
+    //   alert("Please verify the reCAPTCHA");
+    //   return;
+    // }
 
-    // Collect form data
     const formData = new FormData(form.current);
-
-    // Sanitize input fields
     const sanitizedData = {
       firstName: DOMPurify.sanitize(formData.get("firstName")),
       lastName: DOMPurify.sanitize(formData.get("lastName")),
@@ -41,30 +39,22 @@ const Contact = () => {
       message: DOMPurify.sanitize(formData.get("message")),
     };
 
-    try {
-      emailjs
-        .send(
-          serviceId,
-          templateId,
-          sanitizedData, // Send sanitized data
-          userId
-        )
-        .then(
-          (result) => {
-            console.log("Email sent successfully:", result.text);
-            alert("Message sent!");
-            form.current.reset();
-            navigate("/");
-          },
-          (error) => {
-            console.error("Error sending email:", error.text);
-            alert("Failed to send message.");
-          }
-        );
-    } catch (error) {
-      console.error("Unexpected error:", error.message);
-      alert("Unexpected error occurred.");
-    }
+    emailjs
+      .send(serviceId, templateId, sanitizedData, {
+        publicKey: userId,
+      })
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          alert("Message sent!");
+          form.current.reset();
+          navigate("/");
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          alert("Failed to send message.");
+        }
+      );
   };
 
   return (
@@ -75,7 +65,7 @@ const Contact = () => {
           name="description"
           content="Have questions about our Cavalier King Charles Spaniel puppies? Contact Timeless Rustic Acres today! We’re happy to help you find your perfect furry friend."
         />
-        <link rel="canonical" href="https://timelessrusticacres.com/contact" />
+        <link rel="canonical" href={window.location.href} />
       </Helmet>
       <div className="max-w-6xl mx-auto sm:rounded-lg">
         <div>
@@ -168,12 +158,12 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <div className="mt-5 flex justify-center items-center w-full">
+              {/* <div className="mt-5 flex justify-center items-center w-full">
                 <ReCAPTCHA
                   sitekey={recaptchaSiteKey}
                   onChange={handleCaptchaChange}
                 />
-              </div>
+              </div> */}
               <div className="flex justify-center w-full px-3 mt-3">
                 <Button
                   theme={customButtonTheme}

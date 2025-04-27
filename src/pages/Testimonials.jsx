@@ -17,10 +17,7 @@ const Testimonials = () => {
           name="description"
           content="Read testimonials from happy families who found their perfect Cavalier King Charles Spaniel at Timeless Rustic Acres. See why our puppies are so loved!"
         />
-        <link
-          rel="canonical"
-          href="https://timelessrusticacres.com/testimonials"
-        />
+        <link rel="canonical" href={window.location.href} />
       </Helmet>
       <main className="min-h-screen bg-base">
         <h1 className="text-5xl font-bold px-3 py-10 text-center">
