@@ -66,9 +66,10 @@ const Home = () => {
           These adorable puppies are ready to go May 4/25.
         </p>
         <img
+          loading="lazy"
           src={NewPuppies}
           alt="Cavalier puppies"
-          className="rounded-lg mt-3 shadow-lg shadow-slate-300"
+          className="rounded-lg mt-3 shadow-lg shadow-slate-300  h-full w-full object-cover"
         />
       </div>
       <BenefitsSection />
