@@ -61,10 +61,10 @@ const Home = () => {
         </p>
       </div>
       <div className="max-w-3xl mx-auto mt-10">
-        <h2 className="text-4xl mb-2 font-bold">New arrivals!</h2>
+        {/* <h2 className="text-4xl mb-2 font-bold">New arrivals!</h2>
         <p className="text-lg">
           These adorable puppies are ready to go May 4/25.
-        </p>
+        </p> */}
         <img
           loading="lazy"
           src={NewPuppies}
